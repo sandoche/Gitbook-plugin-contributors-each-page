@@ -1,0 +1,24 @@
+{
+  "name": "gitbook-plugin-contributors-each-page",
+  "version": "1.0.0",
+  "description": "A gitbook plugins that adds the list of contributors for each page",
+  "engines": {
+    "gitbook": ">1.x.x"
+  },
+  "gitbook": {
+    "properties": {
+        "owner": {
+            "type": "string",
+            "description": "The owner of the repository"
+        },
+        "repository": {
+          "type": "string",
+          "description": "The repository name"
+        },
+        "ghtoken": {
+          "type": "string",
+          "description": "Github API token"
+        }         
+    }
+  }
+}
