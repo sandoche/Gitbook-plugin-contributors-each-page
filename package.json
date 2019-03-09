@@ -7,18 +7,21 @@
   },
   "gitbook": {
     "properties": {
-        "owner": {
-            "type": "string",
-            "description": "The owner of the repository"
-        },
-        "repository": {
-          "type": "string",
-          "description": "The repository name"
-        },
-        "ghtoken": {
-          "type": "string",
-          "description": "Github API token"
-        }         
+      "owner": {
+        "type": "string",
+        "description": "The owner of the repository"
+      },
+      "repository": {
+        "type": "string",
+        "description": "The repository name"
+      },
+      "ghtoken": {
+        "type": "string",
+        "description": "Github API token"
+      }
     }
+  },
+  "dependencies": {
+    "github-contributors-file": "^1.0.0"
   }
 }
