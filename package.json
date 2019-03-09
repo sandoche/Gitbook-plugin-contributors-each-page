@@ -14,10 +14,6 @@
       "repository": {
         "type": "string",
         "description": "The repository name"
-      },
-      "ghtoken": {
-        "type": "string",
-        "description": "Github API token"
       }
     }
   },
