@@ -1,8 +1,9 @@
 # Gitbook-plugin-contributors-each-page
 A gitbook plugins that adds the list of contributors for each page (works only with GitHub)
 
-# Gitbook-plugin-link-fix
-A gitbook plugin to fix the problem with links by adding a slash at the end.
+## Example
+
+![example](D:\Sandoche\00 - Projects\naming-convention-guide\node_modules\gitbook-plugin-contributors-each-page\example.png)
 
 ## Installation
 ```
@@ -17,7 +18,8 @@ Update book.json, do not forget to replace owner and repository with your Github
   ],
   "contributors-each-page": {
       "owner": "naming-convention",
-      "repository": "naming-convention-guides"
+      "repository": "naming-convention-guides",
+      "title": "Contributors"
     }
   }
 }
