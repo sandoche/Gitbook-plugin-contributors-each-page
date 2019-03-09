@@ -1,4 +1,5 @@
 var getContributors = require('github-contributors-file');
+global.fetch = require("node-fetch");
 
 function htmlContributor (avatarUrl, login, url) {
   return `
@@ -12,24 +13,27 @@ module.exports = {
   // Map of hooks
   hooks: {
     "page": function(page) {
-      const owner = this.options.pluginsConfig['contributors-each-page'].owner;
-      const repository = this.options.pluginsConfig['contributors-each-page'].repository;
-      let htmlContributors = '';
+      return new Promise((resolve, reject) => {
 
-      getContributors(owner, repository, page.rawPath).then((contributors) => {
-        console.log(contributors);
-        
+        const owner = this.options.pluginsConfig['contributors-each-page'].owner;
+        const repository = this.options.pluginsConfig['contributors-each-page'].repository;
+        let htmlContributors = '';
 
-        htmlContributors = contributors.reduce((value, item) => {
-          value = value + htmlContributor(item.avatar_url, item.login, item.url);
-        }, '');
+        getContributors(owner, repository, page.path).then((contributors) => {
+          console.log(contributors);
+          
+          // htmlContributors = contributors.reduce((value, item) => {
+          //   value = value + htmlContributor(item.avatar_url, item.login, item.url);
+          // }, '');
 
-        console.log(htmlContributors);
+          // console.log(htmlContributors);
 
-        page.content = page.content + htmlContributors;
+          page.content = page.content + JSON.stringify(contributors);
+          resolve(page);
+        }).catch((e) => {
+          reject(page)
+        });
       });
-
-      return page;
     }
   }
 };
