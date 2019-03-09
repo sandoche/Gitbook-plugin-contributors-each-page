@@ -3,7 +3,7 @@ A gitbook plugins that adds the list of contributors for each page (works only w
 
 ## Example
 
-![example](D:\Sandoche\00 - Projects\naming-convention-guide\node_modules\gitbook-plugin-contributors-each-page\example.png)
+![example](example.png)
 
 ## Installation
 ```
