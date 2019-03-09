@@ -1,5 +1,6 @@
 var getContributors = require('github-contributors-file');
 global.fetch = require("node-fetch");
+require('dotenv').config();
 
 function htmlContributor (avatarUrl, login, url) {
   return `
@@ -11,13 +12,15 @@ function htmlContributor (avatarUrl, login, url) {
 module.exports = {
   hooks: {
     "page": function(page) {
+      
       return new Promise((resolve, reject) => {
 
         const owner = this.options.pluginsConfig['contributors-each-page'].owner;
         const repository = this.options.pluginsConfig['contributors-each-page'].repository;
+        const token = process.env.GH_TOKEN ? process.env.GH_TOKEN : ''
         let htmlContributors = '';
 
-        getContributors(owner, repository, page.path).then((contributors) => {         
+        getContributors(owner, repository, page.path, token).then((contributors) => {         
           contributorsInHtml = contributors.reduce((value, item) => {
             return value + htmlContributor(item.avatar_url, item.login, item.url);
           }, '');
