@@ -1,7 +1,7 @@
 {
   "name": "gitbook-plugin-contributors-each-page",
-  "version": "1.0.0",
-  "description": "A gitbook plugins that adds the list of contributors for each page",
+  "version": "1.0.1",
+  "description": "A gitbook plugins that adds the list of contributors for each page 👥",
   "engines": {
     "gitbook": ">1.x.x"
   },
