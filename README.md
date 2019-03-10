@@ -19,11 +19,13 @@ Update book.json, do not forget to replace owner and repository with your Github
   "contributors-each-page": {
       "owner": "naming-convention",
       "repository": "naming-convention-guides",
-      "title": "Contributors"
+      "title": "Contributors",
+      "excluded": ["README.md"]
     }
   }
 }
 ```
+Excluded contains the array of filepath of file where you don't want to add the contributors.
 
 To overcome the problem with the Github API, add a .env file on the root of your gitbook project, go there to create one: https://github.com/settings/tokens
 ```

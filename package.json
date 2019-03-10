@@ -18,9 +18,33 @@
       "title": {
         "type": "string",
         "description": "Title of the section"
+      },
+      "excluded": {
+        "type": "array",
+        "description": "Path of file where it should not be added"
       }
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sandoche/Gitbook-plugin-contributors-each-page.git"
+  },
+  "keywords": [
+    "github",
+    "authors",
+    "contributors",
+    "file",
+    "specific",
+    "contributions",
+    "repository",
+    "gibook"
+  ],
+  "author": "Sandoche ADITTANE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sandoche/Gitbook-plugin-contributors-each-page/issues"
+  },
+  "homepage": "https://github.com/sandoche/Gitbook-plugin-contributors-each-page",
   "dependencies": {
     "dotenv": "^6.2.0",
     "github-contributors-file": "^1.0.2",
