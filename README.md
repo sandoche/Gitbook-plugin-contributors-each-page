@@ -1,4 +1,9 @@
 # Gitbook-plugin-contributors-each-page
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](/LICENSE)
+[![Medium Badge](https://badgen.net/badge/icon/medium?icon=medium&label)](https://medium.com/@sandoche)
+[![Twitter: sandochee](https://img.shields.io/twitter/follow/sandochee.svg?style=social)](https://twitter.com/sandochee)
+
+
 A gitbook plugins that adds the list of contributors for each page (works only with GitHub)
 
 ## Example
